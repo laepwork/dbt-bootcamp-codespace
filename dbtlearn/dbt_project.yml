@@ -36,4 +36,7 @@ models:
     dim:
       +materialized: table
 
+    +post-hook:
+      - "GRANT SELECT ON {{ this }} TO ROLE REPORTER"
+
 
